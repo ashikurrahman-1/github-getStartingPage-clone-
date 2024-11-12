@@ -1,0 +1,135 @@
+:root {
+    --primary-color: #E30911;
+    --secondary-color: #ffffff;
+    --text-color: #7F7D8B;
+    --bg-color: #000000;
+
+    --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+body {
+    background: var(--bg-color);
+}
+
+#hero {
+    height: 100vh;
+    background: url(../assets/images/hero-bg.jpg) rgba(0, 0, 0, .6);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center center;
+
+    header {
+        background: rgba(0, 0, 0, .3);
+        .header-container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+
+            .logo {
+                img {
+                    width: 150px;
+                }
+            }
+
+            button {
+                padding: 8px 20px;
+                background: var(--primary-color);
+                color: var(--secondary-color);
+                border: none;
+                border-radius: 8px;
+                font-weight: bold;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .hero {
+
+        .hero-contents {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 80vh;
+
+            .hero-contents-container {
+                h2 {
+                    font-size: 70px;
+                    color: var(--secondary-color);
+                }
+
+                h3 {
+                    color: var(--secondary-color);
+                    font-size: 22px;
+                }
+
+                p {
+                    color: var(--secondary-color);
+                    font-weight: bold;
+                    margin: 30px 0 20px 0;
+                }
+
+                .get-start {
+                    form {
+                        display: flex;
+                        justify-content: center;
+                        gap: 20px;
+                        flex-wrap: wrap;
+                        width: 100%;
+
+                        .get-email {
+                            width: 60%;
+                            padding: 12px;
+                            border-radius: 8px;
+                            background: transparent;
+                            color: white;
+                            font-weight: bold;
+                            font-size: 14px;
+                            border: 1px solid var(--text-color);
+
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+
+                        .get-btn {
+                            padding: 10px 20px;
+                            background: var(--primary-color);
+                            font-weight: bold;
+                            font-size: 24px;
+                            border: none;
+                            border-radius: 8px;
+                            cursor: pointer;
+                            color: var(--secondary-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
